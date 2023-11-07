@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(imageRenderer)
+project(imageProcessor)
 
 #wxWidgets flags
 set(wxBUILD_SHARED OFF)
