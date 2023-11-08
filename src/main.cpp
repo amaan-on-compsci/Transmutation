@@ -224,9 +224,9 @@ wxImage MainFrame::ApplyOrderedDithering(const wxImage &grayscaleImage)
 {
     int width = grayscaleImage.GetWidth();
     int height = grayscaleImage.GetHeight();
-    wxImage ditheredImage = grayscaleImage.Copy();  // Make a copy to avoid modifying the original image
+    wxImage ditheredImage = grayscaleImage.Copy();  
 
-    // Define a different 2x2 threshold matrix
+    // 2x2 threshold matrix
     int thresholdMatrix[2][2] = {
         {0, 2},
         {3, 1}
@@ -259,7 +259,7 @@ wxImage MainFrame::ApplyAutoLevel(const wxImage &originalImage)
 {
     int width = originalImage.GetWidth();
     int height = originalImage.GetHeight();
-    wxImage autoLeveledImage = originalImage.Copy();  // Make a copy to avoid modifying the original image
+    wxImage autoLeveledImage = originalImage.Copy();  
 
     // Find the minimum and maximum intensity values for each color channel
     int minRed = 255, minGreen = 255, minBlue = 255;
@@ -318,7 +318,7 @@ wxImage MainFrame::ApplyGammaCorrection(wxImage &originalImage, const double gam
 {
     int width = originalImage.GetWidth();
     int height = originalImage.GetHeight();
-    wxImage correctedImage = originalImage.Copy();  // Make a copy to avoid modifying the original image
+    wxImage correctedImage = originalImage.Copy();  
 
     for (int y = 0; y < height; y++) {
         for (int x = 0; x < width; x++) {
